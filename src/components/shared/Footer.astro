@@ -1,0 +1,102 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="bg-default">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    <div class="space-global flex flex-col justify-between lg:flex-row">
+      <div class="space-y-8">
+        <a class="flex items-center gap-3 hover:!text-default" href="/">
+          <h1 class="sr-only">Invertefast</h1>
+          <Icon name="logomark" class="h-10 w-36" />
+        </a>
+        <p class="leading-6 text-gray-300 text-sm">
+          INMOBILIARIA HUERTAS GRUPO INV. S.R.L. <br /> 20601000939 <br /> Calle
+          Luis Espejo 1097 Int. 802 Urb. Santa Catalina, La Victoria 15034
+        </p>
+        <div class="flex flex-col items-start gap-4 text-gray-300 text-sm">
+          <a
+            href="mailto:contacto@invertifast.pe"
+            class="border-b hover:text-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            contacto@invertifast.pe
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=51945743060&text=Hola%20Invertifast"
+            class="border-b hover:text-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            +51 945 743 060
+          </a>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <p class="max-w-xl leading-6 text-gray-300 text-xs">
+          Invertifast pone a disposición de sus inversionistas la plataforma de
+          crowfunding de Inversiones.IO para sus operaciones de inversión.
+          Inversiones.IO es una plataforma autorizada para realizar crowdfunding
+          (financiamiento participativo financiero). El crowdfunding es un
+          mecanismo que conecta a las personas con oportunidades de inversión de
+          forma directa y sólo puede realizarse a través de plataformas
+          debidamente autorizadas, reguladas y supervisadas por la
+          Superintendencia del Mercado de Valores1. Toda actividad de inversión
+          realizada dentro de la plataforma se encuentra bajo la supervisión y
+          regulación de la SMV, y cumple con todos los estándares exigidos por
+          la normativa vigente2. <br />1/ Artículo 20 del Decreto de Urgencia
+          13-2020
+          <br />2/ Resolución de Superintendente Nº 045-2021-SMV/02 - Reglamento
+          de la Actividad de Financiamiento Participativo Financiero y sus
+          Sociedades Administradoras.
+        </p>
+        <a
+          href="https://app.inversiones.io/proyectos-a-financiar/financiamiento-de-capital-de-trabajo-241"
+          class="link hover:bg-primary-dark flex items-center justify-center rounded-md bg-primary px-6 py-3 font-bold uppercase text-secondary text-base"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Invierte ahora
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+      <p class="leading-5 text-gray-400 text-xs">
+        &copy; 2024 Invertifast. Todos los derechos reservados.
+        <strong> | Hecho por Agencia Belmont </strong>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .link {
+    @apply bg-primary uppercase;
+    color: black;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid black;
+    box-shadow: 0 0 0 0 black;
+  }
+
+  .link:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 rgb(252, 191, 45);
+  }
+
+  .link:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 rgb(252, 191, 45);
+  }
+
+  .link:focus {
+    outline: none;
+  }
+</style>

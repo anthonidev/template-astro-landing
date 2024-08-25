@@ -1,0 +1,21 @@
+:root {
+  --color-primary: rgb(255, 202, 84); /* Color principal de la marca */
+  --color-secondary: rgb(35, 35, 45); /* Color secundario */
+  --color-tertiary: hsl(220, 16%, 28%); /* Color terciario */
+
+  --color-text-primary: rgb(240, 240, 245); /* Color texto principal */
+  --color-text-secondary: rgb(180, 180, 185); /* Color del texto secundario */
+  --color-text-offset: rgb(255, 202, 84); /* Color texto de contraste */
+
+  --color-background-primary: rgb(15, 15, 20); /* Color fondo principal */
+  --color-background-secondary: rgb(25, 25, 35); /* Color fondo secundario */
+  --color-background-offset: rgb(255, 202, 84); /* Color fondo de contraste */
+
+  --color-border: rgb(85, 85, 95); /* Color de los bordes */
+  --color-hover: rgba(255, 202, 84, 0.8); /* Color al hacer hover */
+  --color-active: rgba(255, 202, 84, 0.6); /* Color al estar activo */
+
+  --color-success: rgb(85, 218, 137); /* Color para mensajes de éxito */
+  --color-error: rgb(255, 99, 91); /* Color para mensajes de error */
+  --color-warning: rgb(255, 204, 102); /* Color para mensajes de advertencia */
+}

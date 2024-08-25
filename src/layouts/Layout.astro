@@ -1,0 +1,82 @@
+---
+import "@styles/index.css";
+import "aos/dist/aos.css";
+import Header from "@components/shared/Header.astro";
+import SocialLinks from "@components/shared/SocialLinks.astro";
+import Footer from "@components/shared/Footer.astro";
+import ButtonWtsp from "@components/shared/ButtonWtsp.astro";
+
+import "@fontsource-variable/montserrat";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="¡INVERTIFAST! Rentabilidad, seguridad y confianza. La innovadora alternativa de inversión de Huertas Inmobiliaria, descubre cómo puedes obtener desde un 12% de interés anual."
+    />
+    <meta
+      name="keywords"
+      content="Invertifast, Invertir dinero,
+Inversiones rentables,
+Mejores inversiones 2024,
+Plataformas de inversión,
+Inversiones a corto plazo,
+Inversiones a largo plazo,
+Rendimiento anual,
+Inversión segura,
+Cómo invertir dinero,
+Fondos de inversión,
+Asesor financiero,
+Crecimiento de capital,
+Estrategias de inversión,
+Plan de inversión,
+Servicios financieros,
+Consejos de inversión,
+Educación financiera,
+Mercado de valores,
+Invertir en acciones,
+Invertir en bonos"
+    />
+    <meta name="author" content="Tu Nombre" />
+    <title>Invertifast - Invierte en tu futuro</title>
+    <!-- <script>
+      import "@scripts/lenisSmoothScroll.ts";
+    </script> -->
+  </head>
+  <body
+    class="text-base bg-primary text-primary selection:bg-secondary selection:text-secondary"
+  >
+    <script>
+      import AOS from "aos";
+      AOS.init();
+    </script>
+    <!-- <SocialLinks /> -->
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <ButtonWtsp />
+    <Footer />
+    <style is:global>
+      /* Reglas CSS para la barra de desplazamiento de la página */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* global */
+      html {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </body>
+</html>

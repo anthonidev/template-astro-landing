@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+const navItems: Array<SocialLink> = [
+  {
+    icon: "mdi:facebook",
+    url: "https://www.facebook.com/people/InvertiFast/61557037077620/",
+  },
+  {
+    icon: "mdi:instagram",
+    url: "https://www.instagram.com/invertifast?igsh=MThqMTNvemNxeXZlYQ==",
+  },
+  { icon: "mdi:youtube", url: "https://www.youtube.com/@InvertiFast/videos" },
+  { icon: "bxl:tiktok", url: "https://www.tiktok.com/@invertifast" },
+];
+---
+
+<header class="border-primary text-white">
+  <nav
+    class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-1"
+  >
+    <ul class="flex items-center justify-end w-full px-6 space-x-3">
+      {
+        navItems.map(({ icon, url }) => (
+          <li>
+            <a
+              class="hover:border-b  hover:text-primary"
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name={icon} class="h-5 w-5" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
