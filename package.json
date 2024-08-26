@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrolib/seo": "1.0.0-beta.5",
     "@fontsource-variable/montserrat": "^5.0.20",
     "aos": "^2.3.4",
     "astro": "^4.14.5",
