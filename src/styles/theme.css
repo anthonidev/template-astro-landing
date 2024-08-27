@@ -18,4 +18,17 @@
   --color-success: rgb(85, 218, 137); /* Color para mensajes de éxito */
   --color-error: rgb(255, 99, 91); /* Color para mensajes de error */
   --color-warning: rgb(255, 204, 102); /* Color para mensajes de advertencia */
+
+  --color-icon: rgb(255, 255, 255); /* Color de los iconos */
+  --color-icon-hover: rgb(
+    184,
+    184,
+    184
+  ); /* Color de los iconos al hacer hover */
+  --color-icon-active: rgba(
+    194,
+    133,
+    0,
+    0.756
+  ); /* Color de los iconos al estar activo */
 }
