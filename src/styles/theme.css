@@ -8,7 +8,7 @@
   --color-text-offset: rgb(255, 202, 84); /* Color texto de contraste */
 
   --color-background-primary: rgb(15, 15, 20); /* Color fondo principal */
-  --color-background-secondary: rgb(25, 25, 35); /* Color fondo secundario */
+  --color-background-secondary: hsl(167, 97%, 45%); /* Color fondo secundario */
   --color-background-offset: rgb(255, 202, 84); /* Color fondo de contraste */
 
   --color-border: rgb(85, 85, 95); /* Color de los bordes */

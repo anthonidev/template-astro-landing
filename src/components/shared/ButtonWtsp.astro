@@ -4,16 +4,65 @@ import { Icon } from "astro-icon/components";
 
 <div class="relative">
   <a
-    href="https://api.whatsapp.com/send?phone=51945743060&text=%C2%A1Hola%20InvertiFast!%20Deseo%20m%C3%A1s%20informaci%C3%B3n.%20%F0%9F%92%B0%F0%9F%93%88"
     target="_blank"
+    href="https://api.whatsapp.com/send?phone=51945743550&text=%C2%A1Hola%20lote%26deal!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20lotes%20de%20300%20m%C2%B2%20en%20Ca%C3%B1ete.%20%F0%9F%8F%A1"
     rel="noopener noreferrer"
-    class="fixed bottom-10 right-10 animate-bounce"
+    class="fixed bottom-10 right-10 z-[999] animate-bounce"
   >
-    <Icon name="wtsp" class="h-14 w-14 lg:h-20 lg:w-20" />
+    <Icon name="wtsp" class="h-14 w-14 lg:h-16 lg:w-16" />
     <span
-      class="absolute top-0 right-0 bg-secondary border text-white rounded-full w-6 h-6 flex items-center justify-center"
+      class="absolute right-0 top-0 flex h-7 w-7 items-center justify-center rounded-full border bg-green-800 text-white"
     >
       1
     </span>
   </a>
 </div>
+
+<style>
+  .link {
+    background-color: #611b97;
+    border: 1px solid white;
+    padding: 5px;
+    position: relative;
+    width: 8.9em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+  }
+
+  .link span {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    color: white;
+  }
+
+  .link .icon {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff;
+  }
+
+  .link:hover span {
+    left: 0.5em;
+    color: #fff;
+  }
+
+  .link:hover .icon {
+    opacity: 1;
+  }
+
+  .link:hover {
+    background-color: #25d366;
+  }
+</style>
