@@ -7,6 +7,7 @@ import Footer from "@components/shared/Footer.astro";
 import ButtonWtsp from "@components/shared/ButtonWtsp.astro";
 
 import "@fontsource-variable/montserrat";
+import ThemeEditor from "@/components/shared/ThemeEdit";
 ---
 
 <html lang="es">
@@ -35,8 +36,9 @@ import "@fontsource-variable/montserrat";
     <main>
       <slot />
     </main>
+    <ThemeEditor client:load />
     <ButtonWtsp />
-    <Footer />
+    <!-- <Footer /> -->
     <style is:global>
       /* Reglas CSS para la barra de desplazamiento de la página */
       .scrollbar-hide::-webkit-scrollbar {

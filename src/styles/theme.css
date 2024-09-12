@@ -1,17 +1,17 @@
 :root {
-  --color-primary: rgb(255, 202, 84); /* Color principal de la marca */
-  --color-secondary: rgb(35, 35, 45); /* Color secundario */
+  --color-primary: #460808; /* Color principal de la marca */
+  --color-secondary: hsl(0, 0%, 94%); /* Color secundario */
   --color-tertiary: hsl(220, 16%, 28%); /* Color terciario */
 
-  --color-text-primary: rgb(240, 240, 245); /* Color texto principal */
+  --color-text-primary: #630000; /* Color texto principal */
   --color-text-secondary: rgb(180, 180, 185); /* Color del texto secundario */
-  --color-text-offset: rgb(255, 202, 84); /* Color texto de contraste */
+  --color-text-offset: rgb(35, 43, 53); /* Color texto de contraste */
 
-  --color-background-primary: rgb(15, 15, 20); /* Color fondo principal */
-  --color-background-secondary: hsl(167, 97%, 45%); /* Color fondo secundario */
-  --color-background-offset: rgb(255, 202, 84); /* Color fondo de contraste */
+  --color-background-primary: #f0f0d6; /* Color fondo principal */
+  --color-background-secondary: #f06f66; /* Color fondo secundario */
+  --color-background-offset: #f0e0b7; /* Color fondo de contraste */
 
-  --color-border: rgb(85, 85, 95); /* Color de los bordes */
+  --color-border: #57423f; /* Color de los bordes */
   --color-hover: rgba(255, 202, 84, 0.8); /* Color al hacer hover */
   --color-active: rgba(255, 202, 84, 0.6); /* Color al estar activo */
 

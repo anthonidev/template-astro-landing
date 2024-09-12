@@ -9,3 +9,9 @@ interface SocialLink {
   icon: string;
 }
 declare module "micromodal";
+type FormLead = {
+  nombre: string;
+  apellido: string;
+  telefono: string;
+  mensaje: string;
+};

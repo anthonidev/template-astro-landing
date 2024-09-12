@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+form {
+  position: relative;
+  background: var(--color-background-offset);
+  opacity: 0.9;
+  padding: 20px 40px;
+  border-radius: 45px;
+  box-shadow: 0px 0px 60px 5px rgba(7, 7, 7, 0.4);
+  --tw-bg-opacity: 0.6;
+}
+
+form .submit-btn {
+  padding: 10px 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: default;
+  margin-bottom: 20px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+form .submit-btn:hover {
+  background-color: var(--color-background-offset);
+  cursor:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='58' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎉</text></svg>")
+      16 0,
+    auto;
+  color: var(--color-text-offset);
+  border: 2px solid var(--color-text-offset);
+  box-shadow: 5px 5px 0px var(--color-text-offset);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+h1 {
+  position: relative;
+  display: flex;
+  color: var(--color-text-primary);
+  justify-content: center;
+  font-weight: 900;
+  font-size: 2em;
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.9rem;
+  text-align: center;
+}
+
+h1::before,
+h1::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--color-background-secondary);
+}
+
+h1::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-background-secondary);
+}
+
+h1::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+.subh1 {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.form_group {
+  display: flex;
+  color: var(--color-text-primary);
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+}
+
+.form_style {
+  outline: none;
+  border: 2px solid var(--color-border);
+  box-shadow: 3px 4px 0px 1px var(--color-background-secondary);
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  width: 100%;
+  color: var(--color-text-primary);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease; /* Añadir transición suave */
+}
+
+.form_style:focus {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px var(--color-background-secondary);
+}
+
+.error_message {
+  color: var(--color-error);
+  font-weight: 600;
+  margin: 5px 0;
+  font-size: 0.6em;
+}
