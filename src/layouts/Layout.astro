@@ -1,6 +1,5 @@
 ---
 import "@styles/index.css";
-import "aos/dist/aos.css";
 import Header from "@components/shared/Header.astro";
 import SocialLinks from "@components/shared/SocialLinks.astro";
 import Footer from "@components/shared/Footer.astro";
@@ -8,6 +7,7 @@ import ButtonWtsp from "@components/shared/ButtonWtsp.astro";
 
 import "@fontsource-variable/montserrat";
 import ThemeEditor from "@/components/shared/ThemeEdit";
+import ButtonTheme from "@/components/shared/buttons/ButtonTheme";
 ---
 
 <html lang="es">
@@ -20,23 +20,17 @@ import ThemeEditor from "@/components/shared/ThemeEdit";
     <meta name="keywords" content="keywords" />
     <meta name="author" content="Tu Nombre" />
     <title>Example - Landing</title>
-    <!-- <script>
-      import "@scripts/lenisSmoothScroll.ts";
-    </script> -->
   </head>
   <body
     class="text-base bg-primary text-primary selection:bg-secondary selection:text-secondary"
   >
-    <script>
-      import AOS from "aos";
-      AOS.init();
-    </script>
     <!-- <SocialLinks /> -->
     <Header />
     <main>
       <slot />
     </main>
-    <ThemeEditor client:load />
+    <!-- <ThemeEditor client:load /> -->
+    <ButtonTheme client:load />
     <ButtonWtsp />
     <!-- <Footer /> -->
     <style is:global>

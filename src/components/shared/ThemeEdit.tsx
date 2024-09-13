@@ -110,10 +110,10 @@ const ThemeEditor: React.FC = () => {
         padding: "20px",
         backgroundColor: "var(--color-background-primary)",
       }}
+      className="grid gap-4"
     >
-      <h2>Edit Theme Colors</h2>
       {Object.keys(selectedColors).map((colorKey) => (
-        <div key={colorKey}>
+        <div key={colorKey} className="mb-4 flex items-center justify-between">
           <label>{colorKey.replace(/([A-Z])/g, " $1")}</label>
           <input
             type="color"
