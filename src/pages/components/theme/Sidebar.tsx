@@ -38,7 +38,10 @@ const Sidebar = () => {
             className="fixed left-0 top-0 h-full w-[90%] overflow-y-auto bg-white p-4 shadow-lg sm:w-1/2"
           >
             <div className="mb-4 flex items-center justify-between">
-              <h2>Colores</h2>
+              <h2 className="font-bold" style={{ fontSize: "1.5rem" }}>
+                Colores
+              </h2>
+
               <button onClick={() => changeTheme()}>
                 <Icon
                   icon="material-symbols-light:tab-close-sharp"
@@ -46,6 +49,9 @@ const Sidebar = () => {
                 />
               </button>
             </div>
+            <span className="text-secondary" style={{ fontSize: "1rem" }}>
+              Selecciona un color para cambiar el tema de la aplicación
+            </span>
             <ThemeEditor />
           </motion.div>
         </Dialog>

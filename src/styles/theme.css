@@ -1,24 +1,38 @@
 :root {
+  /* Colores Base */
   --color-primary: #460808; /* Color principal de la marca */
   --color-secondary: hsl(0, 0%, 94%); /* Color secundario */
   --color-tertiary: hsl(220, 16%, 28%); /* Color terciario */
 
+  /* Colores de Texto */
   --color-text-primary: #630000; /* Color texto principal */
-  --color-text-secondary: rgb(180, 180, 185); /* Color del texto secundario */
+  --color-text-secondary: rgb(180, 180, 185); /* Color texto secundario */
   --color-text-offset: rgb(35, 43, 53); /* Color texto de contraste */
 
+  /* Colores de Fondo */
   --color-background-primary: #f0f0d6; /* Color fondo principal */
   --color-background-secondary: #f06f66; /* Color fondo secundario */
   --color-background-offset: #f0e0b7; /* Color fondo de contraste */
 
+  /* Bordes y Estados */
   --color-border: #57423f; /* Color de los bordes */
   --color-hover: rgba(255, 202, 84, 0.8); /* Color al hacer hover */
   --color-active: rgba(255, 202, 84, 0.6); /* Color al estar activo */
+  --color-focus: #ffc254; /* Color al enfocar un input */
+  --color-disabled: rgba(
+    180,
+    180,
+    185,
+    0.5
+  ); /* Color de elementos deshabilitados */
 
+  /* Mensajes del Formulario */
   --color-success: rgb(85, 218, 137); /* Color para mensajes de éxito */
   --color-error: rgb(255, 99, 91); /* Color para mensajes de error */
   --color-warning: rgb(255, 204, 102); /* Color para mensajes de advertencia */
+  --color-info: #85a5ff; /* Color para mensajes de información */
 
+  /* Iconos */
   --color-icon: rgb(255, 255, 255); /* Color de los iconos */
   --color-icon-hover: rgb(
     184,
@@ -31,4 +45,27 @@
     0,
     0.756
   ); /* Color de los iconos al estar activo */
+
+  /* Sombras y Bordes */
+  --color-box-shadow: rgba(87, 66, 63, 0.3); /* Sombra de los elementos */
+  --border-radius-small: 4px; /* Radio de borde pequeño */
+  --border-radius-medium: 8px; /* Radio de borde mediano */
+  --border-radius-large: 12px; /* Radio de borde grande */
+
+  /* Gradientes y Opciones Visuales */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #6dd5fa 0%,
+    #2980b9 100%
+  ); /* Gradiente primario */
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #f6d365 0%,
+    #fda085 100%
+  ); /* Gradiente secundario */
+
+  /* Niveles de Opacidad */
+  --opacity-default: 0.85; /* Opacidad por defecto */
+  --opacity-hover: 0.95; /* Opacidad en hover */
+  --opacity-disabled: 0.6; /* Opacidad de elementos deshabilitados */
 }

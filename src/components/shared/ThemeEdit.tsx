@@ -2,24 +2,6 @@ import { useState, type ChangeEvent, useEffect } from "react";
 
 // Define la estructura de los colores
 interface ThemeColors {
-  primary: string;
-  secondary: string;
-  tertiary: string;
-  textPrimary: string;
-  textSecondary: string;
-  textOffset: string;
-  backgroundPrimary: string;
-  backgroundSecondary: string;
-  backgroundOffset: string;
-  border: string;
-  hover: string;
-  active: string;
-  success: string;
-  error: string;
-  warning: string;
-  icon: string;
-  iconHover: string;
-  iconActive: string;
   [key: string]: string; // Para permitir otros colores dinámicos
 }
 
@@ -110,14 +92,20 @@ const ThemeEditor: React.FC = () => {
         padding: "20px",
         backgroundColor: "var(--color-background-primary)",
       }}
-      className="grid gap-4"
+      className="grid grid-cols-3 gap-4"
     >
       {Object.keys(selectedColors).map((colorKey) => (
-        <div key={colorKey} className="mb-4 flex items-center justify-between">
-          <label>{colorKey.replace(/([A-Z])/g, " $1")}</label>
+        <div
+          key={colorKey}
+          className="mb-4 flex items-start justify-between rounded-lg border bg-white p-4"
+        >
+          <label className="text-xl capitalize text-secondary">
+            {colorKey.replace(/([A-Z])/g, " $1")}
+          </label>
           <input
             type="color"
             value={selectedColors[colorKey]}
+            className="h-10 w-10 rounded-full"
             onChange={(e) => handleColorChange(e, colorKey)}
           />
         </div>

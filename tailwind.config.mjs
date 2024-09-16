@@ -24,10 +24,17 @@ export default {
         border: "var(--color-border)",
         hover: "var(--color-hover)",
         active: "var(--color-active)",
+        focus: "var(--color-focus)",
+        disabled: "var(--color-disabled)",
 
         success: "var(--color-success)",
         error: "var(--color-error)",
         warning: "var(--color-warning)",
+        info: "var(--color-info)",
+
+        icon: "var(--color-icon)",
+        "icon-hover": "var(--color-icon-hover)",
+        "icon-active": "var(--color-icon-active)",
       },
       textColor: {
         primary: "var(--color-text-primary)",
@@ -42,25 +49,21 @@ export default {
       borderColor: {
         primary: "var(--color-border)",
       },
+      boxShadow: {
+        custom: "0 2px 4px var(--color-box-shadow)", // Sombra personalizada
+      },
       borderRadius: {
-        sm: "var(--border-radius-sm)",
-        md: "var(--border-radius-md)",
-        lg: "var(--border-radius-lg)",
+        sm: "var(--border-radius-small)",
+        lg: "var(--border-radius-large)",
       },
-      spacing: {
-        xs: "var(--spacing-xs)",
-        sm: "var(--spacing-sm)",
-        md: "var(--spacing-md)",
-        lg: "var(--spacing-lg)",
-        xl: "var(--spacing-xl)",
+      opacity: {
+        default: "var(--opacity-default)",
+        hover: "var(--opacity-hover)",
+        disabled: "var(--opacity-disabled)",
       },
-      maxWidth: {
-        container: "var(--max-width)",
-      },
-      height: {
-        button: "var(--button-height)",
-        input: "var(--input-height)",
-        navbar: "var(--navbar-height)",
+      gradientColorStops: {
+        primary: "var(--gradient-primary)",
+        secondary: "var(--gradient-secondary)",
       },
     },
   },
