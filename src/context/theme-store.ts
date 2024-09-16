@@ -1,9 +1,10 @@
 import { create } from "zustand";
+import { persist, createJSONStorage } from "zustand/middleware";
 interface ThemeColors {
   name: string;
   colors: {
     type: "color" | "number";
-    [key: string]: string; // Para permitir otros colores dinámicos
+    [key: string]: string;
   }[];
 }
 
@@ -89,12 +90,35 @@ interface ThemeState {
   isOpen: boolean;
   changeTheme: () => void;
   theme: ThemeColors[];
+  changeColor: (color: string, value: string) => void;
 }
 
-const useThemeStore = create<ThemeState>((set, get) => ({
-  isOpen: false,
-  changeTheme: () => set({ isOpen: !get().isOpen }),
-  theme: defaultTheme,
-}));
-
+export const useThemeStore = create<ThemeState>()(
+  persist(
+    (set, get) => ({
+      isOpen: false,
+      changeTheme: () => set({ isOpen: !get().isOpen }),
+      theme: defaultTheme,
+      changeColor: (color, value) => {
+        set((state) => {
+          const newTheme = state.theme.map((section) => {
+            const newColors = section.colors.map((c) => {
+              if (c[color]) {
+                return { ...c, [color]: value };
+              }
+              return c;
+            });
+            return { ...section, colors: newColors };
+          });
+          return { ...state, theme: newTheme };
+        });
+      },
+    }),
+    {
+      name: "theme-storage",
+      storage: createJSONStorage(() => sessionStorage),
+      partialize: (state) => ({ isOpen: state.isOpen, theme: state.theme }),
+    },
+  ),
+);
 export default useThemeStore;
