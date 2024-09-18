@@ -91,6 +91,7 @@ interface ThemeState {
   changeTheme: () => void;
   theme: ThemeColors[];
   changeColor: (color: string, value: string) => void;
+  applyChanges: () => void;
 }
 
 export const useThemeStore = create<ThemeState>()(
@@ -112,6 +113,21 @@ export const useThemeStore = create<ThemeState>()(
           });
           return { ...state, theme: newTheme };
         });
+      },
+      applyChanges: () => {
+        const theme = get().theme;
+        theme.forEach((section) => {
+          section.colors.forEach((color) => {
+            document.documentElement.style.setProperty(
+              Object.keys(color)[0],
+              Object.values(color)[0],
+            );
+          });
+        });
+        document.documentElement.classList.add("theme-updated");
+        setTimeout(() => {
+          document.documentElement.classList.remove("theme-updated");
+        }, 100);
       },
     }),
     {

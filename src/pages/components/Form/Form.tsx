@@ -2,6 +2,8 @@ import Input from "@/components/form/Input";
 import { useForm } from "@/hooks/useFormLead";
 import Confetti from "react-confetti";
 import "@styles/form/emailcss.css";
+import useThemeStore from "@/context/theme-store";
+import { useEffect } from "react";
 
 const Form = () => {
   const {
@@ -13,6 +15,10 @@ const Form = () => {
     width,
     height,
   } = useForm();
+  const { theme, applyChanges } = useThemeStore();
+  useEffect(() => {
+    applyChanges();
+  }, [theme]);
 
   return (
     <section className="section_height relative flex items-center justify-center bg-primary">
